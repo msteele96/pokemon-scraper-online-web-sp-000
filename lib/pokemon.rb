@@ -14,7 +14,8 @@ class Pokemon
   end
 
   def self.find(id, db)
-    db.execute("SELECT * FROM pokemon WHERE id = ?", id).map { |row| Pokemon.new(row[1], row[2], db, row[0]) }
+    db.execute("SELECT * FROM pokemon WHERE id = ?", id).map { |row| found = Pokemon.new(row[1], row[2], db, row[0]) }
+    found
   end
 
 end
