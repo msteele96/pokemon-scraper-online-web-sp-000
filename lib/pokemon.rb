@@ -3,7 +3,7 @@ class Pokemon
   attr_reader :id
 
   def initialize(db)
-  
+
   end
 
 end
