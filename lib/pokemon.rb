@@ -15,7 +15,6 @@ class Pokemon
 
   def self.find(id, db)
     db.execute("SELECT * FROM pokemon WHERE id = ? LIMIT 1", id).map { |row| Pokemon.new(name:row[1], type:row[2], db:db, id:row[0]) }.first
-    found
   end
 
 end
